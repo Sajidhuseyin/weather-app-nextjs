@@ -1,5 +1,22 @@
  export type TempUnit = "C" | "F";
 
+export interface CurrentWeather {
+  temp_c:number;
+  temp_f:number;
+
+  humidity:number;
+
+  wind_kph:number;
+
+  feelslike_c:number;
+  feelslike_f:number;
+
+  condition:{
+    text:string;
+    icon:string;
+  };
+}
+
 export interface ForecastDay {
   date:string;
 
@@ -42,22 +59,7 @@ export interface WeatherData {
     country:string;
   };
 
-  current:{
-    temp_c:number;
-    temp_f:number;
-
-    humidity:number;
-
-    wind_kph:number;
-
-    feelslike_c:number;
-    feelslike_f:number;
-
-    condition:{
-      text:string;
-      icon:string;
-    };
-  };
+  current: CurrentWeather;
 
   forecast:{
     forecastday: ForecastDay[];
