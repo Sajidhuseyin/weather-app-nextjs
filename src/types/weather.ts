@@ -4,14 +4,15 @@ export interface CurrentWeather {
   temp_c:number;
   temp_f:number;
 
-humidity:number;
+  humidity:number;
 
 wind_kph:number;
 wind_mph:number;
 
+pressure_mb:number;
+
 feelslike_c:number;
 feelslike_f:number;
-
   condition:{
     text:string;
     icon:string;
@@ -54,7 +55,6 @@ export interface ForecastDay {
 }
 
 export interface WeatherData {
-
   location:{
     name:string;
     country:string;
@@ -65,5 +65,4 @@ export interface WeatherData {
   forecast:{
     forecastday: ForecastDay[];
   };
-
 }
