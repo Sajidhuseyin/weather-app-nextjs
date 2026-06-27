@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
+
 
 * {
   margin: 0;
@@ -124,4 +125,43 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Weather card scrollbar */
+.weather-scroll{
+  overflow-y:auto;
+  overflow-x:hidden;
+
+  /* Reserve scrollbar space permanently */
+  scrollbar-gutter:stable both-edges;
+}
+
+/* Chrome / Edge */
+.weather-scroll::-webkit-scrollbar{
+  width:8px;
+}
+
+.weather-scroll::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+.weather-scroll::-webkit-scrollbar-thumb{
+  background:transparent;
+  border-radius:20px;
+  transition:all .3s ease;
+}
+
+/* Appear only on hover */
+.weather-scroll:hover::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,.45);
+}
+
+/* Firefox */
+.weather-scroll{
+  scrollbar-width:thin;
+  scrollbar-color:transparent transparent;
+}
+
+.weather-scroll:hover{
+  scrollbar-color:rgba(255,255,255,.45) transparent;
 }

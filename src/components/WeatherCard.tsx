@@ -200,18 +200,9 @@ opacity:1,
 y:0
 }}
 
-className="
-w-full
-max-w-md
-glass-panel
-rounded-[30px]
-px-6
-pt-20
-pb-6
-relative
-overflow-hidden
-"
-
+className="w-full max-w-[420px] max-h-[90vh] glass-panel
+ rounded-[24px] px-4 pt-8 pb-4 text-slate-800 relative overflow-y-auto 
+weather-scroll"
 >
 
 <header className="
